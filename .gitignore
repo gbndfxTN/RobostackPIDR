@@ -18,4 +18,6 @@ __pycache__/
 
 # --- If this workspace contains an external repo clone, ignore it ---
 src/unitree-go2-ros2/
+src/pidr
+
 
