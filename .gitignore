@@ -1,0 +1,21 @@
+# --- OS / Editor ---
+.DS_Store
+.vscode/
+.idea/
+
+# --- Pixi environment ---
+.pixi/*
+!.pixi/config.toml
+
+# --- ROS 2 / colcon generated artifacts ---
+build/
+install/
+log/
+
+# --- Python cache ---
+__pycache__/
+*.pyc
+
+# --- If this workspace contains an external repo clone, ignore it ---
+src/unitree-go2-ros2/
+
