@@ -1,0 +1,34 @@
+octomap_server:
+  ros__parameters:
+    use_sim_time: true
+
+    frame_id: base_link
+    base_frame_id: base_link
+    resolution: 0.05
+
+    # Sensor model tuning (RGBD depth cloud)
+    sensor_model.max_range: 6.0
+    sensor_model.hit: 0.7
+    sensor_model.miss: 0.4
+    sensor_model.min: 0.12
+    sensor_model.max: 0.97
+
+    # Input cloud crop to remove floor noise and distant points
+    point_cloud_min_x: -3.0
+    point_cloud_max_x: 3.0
+    point_cloud_min_y: -3.0
+    point_cloud_max_y: 3.0
+    point_cloud_min_z: -0.20
+    point_cloud_max_z: 1.50
+
+    occupancy_min_z: -0.20
+    occupancy_max_z: 2.00
+
+    filter_ground_plane: false
+    filter_speckles: true
+    publish_free_space: false
+    incremental_2D_projection: false
+    compress_map: true
+    latch: false
+    use_height_map: true
+    colored_map: false
