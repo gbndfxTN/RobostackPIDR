@@ -14,6 +14,8 @@ env = { RMW_IMPLEMENTATION = "rmw_cyclonedds_cpp", ROS_LOCALHOST_ONLY = "1", GAZ
 # Définition de la tâche de compilation globale
 [tasks]
 build = "colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DPython_FIND_VIRTUALENV=ONLY -DPython3_FIND_VIRTUALENV=ONLY"
+go2 = "ros2 launch go2_config gazebo.launch.py"
+go2-rviz = "ros2 launch go2_config gazebo.launch.py rviz:=true"
 
 [dependencies]
 python = "*"
@@ -30,6 +32,7 @@ colcon-common-extensions = "*"
 ros-humble-desktop = "*"
 # Intégration Gazebo
 ros-humble-ros-gz = "*"
+gazebo = "*"
 # --- NOUVEAUTÉS : Navigation et Cartographie ---
 # Le serveur qui convertit les nuages de points 3D en voxels
 ros-humble-octomap-server = "*"
