@@ -16,6 +16,10 @@ env = { RMW_IMPLEMENTATION = "rmw_cyclonedds_cpp", ROS_LOCALHOST_ONLY = "1", GAZ
 build = "colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DPython_FIND_VIRTUALENV=ONLY -DPython3_FIND_VIRTUALENV=ONLY"
 go2 = "ros2 launch go2_config gazebo.launch.py"
 go2-rviz = "ros2 launch go2_config gazebo.launch.py rviz:=true"
+go2-clean = "pkill -f 'ros2 launch go2_config gazebo.launch.py'; pkill -f gzserver; pkill -f gzclient; pkill -f spawn_entity.py; pkill -f quadruped_controller_node; pkill -f state_estimation_node; pkill -f robot_state_publisher"
+path-teleop = "ros2 run semantic_path_teleop semantic_path_teleop --ros-args -p path_file:=outputs/go2_ros_tracking_minimal/semantic_path.json -p cmd_vel_topic:=/cmd_vel -p odom_topic:=/odom/ground_truth"
+path-markers = "ros2 run semantic_path_teleop spawn_path_markers --ros-args -p path_file:=outputs/go2_ros_tracking_minimal/semantic_path.json -p stride:=3"
+path-teleop-dry = "ros2 run semantic_path_teleop semantic_path_teleop --ros-args -p path_file:=outputs/go2_ros_tracking_minimal/semantic_path.json -p cmd_vel_topic:=/cmd_vel -p dry_run:=true"
 
 [dependencies]
 python = "*"
