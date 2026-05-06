@@ -1,0 +1,263 @@
+{
+  "scene_id": "cafe_demo",
+  "frame_id": "map",
+  "robot_state": {
+    "x": 0.0,
+    "y": 0.0,
+    "theta": 0.0,
+    "radius": 0.42
+  },
+  "goal": {
+    "x": 2.9,
+    "y": -8.1,
+    "theta": -1.57,
+    "tolerance": 0.25
+  },
+  "world_bounds": {
+    "xmin": -6.2,
+    "xmax": 4.5,
+    "ymin": -10.8,
+    "ymax": 2.2
+  },
+  "nodes": [
+    {
+      "id": "table1",
+      "label": "table",
+      "position": [
+        0.5,
+        -1.6,
+        0.75
+      ],
+      "dimensions": [
+        1.2,
+        0.8,
+        0.75
+      ]
+    },
+    {
+      "id": "table2",
+      "label": "table",
+      "position": [
+        2.4,
+        -5.5,
+        0.75
+      ],
+      "dimensions": [
+        1.2,
+        0.8,
+        0.75
+      ]
+    },
+    {
+      "id": "table3",
+      "label": "table",
+      "position": [
+        -1.5,
+        -5.5,
+        0.75
+      ],
+      "dimensions": [
+        1.2,
+        0.8,
+        0.75
+      ]
+    },
+    {
+      "id": "table4",
+      "label": "table",
+      "position": [
+        2.4,
+        -9.0,
+        0.75
+      ],
+      "dimensions": [
+        1.2,
+        0.8,
+        0.75
+      ]
+    },
+    {
+      "id": "table5",
+      "label": "table",
+      "position": [
+        -1.5,
+        -9.0,
+        0.75
+      ],
+      "dimensions": [
+        1.2,
+        0.8,
+        0.75
+      ]
+    },
+    {
+      "id": "chair2",
+      "label": "chair",
+      "position": [
+        1.55,
+        -5.1,
+        0.45
+      ],
+      "dimensions": [
+        0.55,
+        0.55,
+        0.9
+      ]
+    },
+    {
+      "id": "chair3",
+      "label": "chair",
+      "position": [
+        -0.65,
+        -5.1,
+        0.45
+      ],
+      "dimensions": [
+        0.55,
+        0.55,
+        0.9
+      ]
+    },
+    {
+      "id": "chair4",
+      "label": "chair",
+      "position": [
+        1.65,
+        -8.55,
+        0.45
+      ],
+      "dimensions": [
+        0.55,
+        0.55,
+        0.9
+      ]
+    },
+    {
+      "id": "person_static",
+      "label": "person",
+      "position": [
+        -1.0,
+        -5.0,
+        0.9
+      ],
+      "dimensions": [
+        0.55,
+        0.55,
+        1.65
+      ],
+      "metadata": {
+        "seated": true
+      }
+    },
+    {
+      "id": "glass_table2",
+      "label": "glass",
+      "position": [
+        2.35,
+        -5.45,
+        1.05
+      ],
+      "dimensions": [
+        0.16,
+        0.16,
+        0.24
+      ],
+      "support_surface_id": "table2",
+      "confidence": 0.92
+    },
+    {
+      "id": "vase_table4",
+      "label": "vase",
+      "position": [
+        2.45,
+        -9.0,
+        1.02
+      ],
+      "dimensions": [
+        0.22,
+        0.22,
+        0.35
+      ],
+      "support_surface_id": "table4",
+      "confidence": 0.94
+    },
+    {
+      "id": "lamp_table1",
+      "label": "lamp",
+      "position": [
+        0.55,
+        -1.55,
+        1.05
+      ],
+      "dimensions": [
+        0.22,
+        0.22,
+        0.48
+      ],
+      "support_surface_id": "table1",
+      "confidence": 0.9
+    }
+  ],
+  "edges": [
+    {
+      "subject": "person_static",
+      "relation": [
+        "near",
+        "above"
+      ],
+      "object": "chair3",
+      "confidence": 0.94
+    },
+    {
+      "subject": "chair3",
+      "relation": [
+        "near"
+      ],
+      "object": "table3",
+      "confidence": 0.92
+    },
+    {
+      "subject": "chair2",
+      "relation": [
+        "near"
+      ],
+      "object": "table2",
+      "confidence": 0.92
+    },
+    {
+      "subject": "chair4",
+      "relation": [
+        "near"
+      ],
+      "object": "table4",
+      "confidence": 0.92
+    },
+    {
+      "subject": "glass_table2",
+      "relation": [
+        "near",
+        "above"
+      ],
+      "object": "table2",
+      "confidence": 0.96
+    },
+    {
+      "subject": "vase_table4",
+      "relation": [
+        "near",
+        "above"
+      ],
+      "object": "table4",
+      "confidence": 0.96
+    },
+    {
+      "subject": "lamp_table1",
+      "relation": [
+        "near",
+        "above"
+      ],
+      "object": "table1",
+      "confidence": 0.95
+    }
+  ]
+}
